@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+
+
+
+<nav>
+    <ul class="menu-options">
+        <li class="switch">
+            <i class='bx bx-sun'></i>
+            <i class='bx bx-moon'></i>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Ingrese sus datos</h1>
+
+    <form action="">
+        
+            <label for="">Nombre: </label>
+        <div class="input-box">
+            <input  type="text" placeholder="Coloque su nombre" required minlength="3" maxlength="45" pattern="[a-zA-ZáéíóúüñÑ\s]*">
+        </div>
+            <label for="">Apellido:</label>
+        <div class="input-box">
+            <input type="text" required placeholder="Coloque su apellido" minlength="2" maxlength="45" pattern="[a-zA-ZáéíóúüñÑ\s]*">
+        </div>
+
+            <label for="">Email: </label>
+        <div class="input-box">
+            <input type="email" required placeholder="Coloque su email" maxlength="45" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        </div>
+
+            <label for="">Fecha de Nacimiento: </label>
+        <div class="input-box">
+            <input type="date" required min="1900-01-01" max="2008-01-01">
+        </div>
+
+            <label for="">País de residencia: </label>
+        <div class="input-box">
+            <select name="" id="" required>
+                <option value="AR">Argentina</option>
+                <option value="BO">Bolivia</option>
+                <option value="PE">Perú</option>
+                <option value="COL">Colombia</option>
+                <option value="BRA">Brasil</option>
+                <option value="VEN">Venezuela</option>
+            </select>
+        </div>
+        
+            <button type="submit" class="btn">Enviar</button>
+
+    </form>
+
+</div>
+
+<script src="js/dark.js"></script>
+</body>
+</html>
