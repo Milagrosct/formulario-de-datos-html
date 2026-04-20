@@ -106,7 +106,6 @@ form button:hover {
 .switch{
     width: 60px;
     height: 30px;
-    padding: 0, 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,31 +113,34 @@ form button:hover {
     border-radius: 100px;
     border: #333 2px solid;
     background-color: rgb(44, 29, 59);
-}
-
-.switch i{
-    color: #e1e1e1;
-    font-size: 1rem;
+    cursor: pointer;
     padding: 0 5px;
 }
 
-.menu-options li:last-child::before{
+.switch i{
+    color: white;
+}
+
+/* círculo */
+.switch::before{
     content: "";
     position: absolute;
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    background-color: white;
-    border: solid thin #000;
-    left: 0;
-} 
-
-.menu-options li:last-child.active::before{
-    right: 0;
-    left: unset;
-    border: solid thin #fff;
+    background: white;
+    left: 2px;
+    transition: 0.3s;
 }
 
+/* activo */
+.switch.active::before{
+    left: 33px;
+}
+
+.switch.active{
+    background-color: purple;
+}
 nav {
     position: fixed;
     top: 0;
@@ -206,4 +208,15 @@ body.active .input-box {
 
 body.active .input-box select{
 color: #fd28c8;
+}
+
+#mensajeExito {
+    color: rgb(68, 255, 68);
+   text-align: center;
+    padding: 10px;
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+    border: rgb(68, 255, 68) 2px solid;
+    border-radius: 20px;
 }
